@@ -1,0 +1,372 @@
+@imgurl:'http://wd.kuaidaosite.com/addons/kd_poster/template/mobile/css/';
+// @rem: 50rem;
+@rem: 40rem;
+/* reset css */
+body,dd,dl,form,h1,h2,h3,h4,h5,h6,input,ol,p,select,textarea,ul{margin:0;padding:0}li{list-style:none}img{border:none;display:block;width:100%}article,aside,blockquote,body,button,code,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,select,td,textarea,th,ul{outline:0;border:none;background-color:transparent}a,button,input{-webkit-tap-highlight-color:transparent}body *{-webkit-text-size-adjust:100%}button,input{-webkit-appearance:none}em,i{font-style:normal}textarea{resize:none}div{-webkit-highlight:none;-webkit-tap-highlight-color:transparent}a{text-decoration:none;-webkit-highlight:none;-webkit-tap-highlight-color:transparent;color:#000}a:hover{opacity:.9}.fl{float:left}.fr{float:right}.clear:after,.clear:before{content:"";display:table}.clear:after{content:"";display:block;height:0;clear:both;visibility:hidden}html{width:100%;height:100%}body{width:100%;height:100%;background-color:#fff;font-family: "PingFangSC", Arial, Helvetica, STHeiTi, sans-serif;}
+b,strong,h1,h2,h3,h4,h5,h6{font-size: 14px;font-weight:normal;}
+.hidden {
+  display: none;
+}
+.hide {
+    display: none!important;
+}
+body,
+textarea,
+input,
+select {
+  font-size: 14px;
+  color: #222222;
+  font-weight: normal;
+  font-family: "PingFangSC","Helvetica Neue", Helvetica, STHeiTi, 'Microsoft Yahei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+}
+html {
+	font-size: 20px;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: sans-serif;
+}
+@media only screen and (min-width: 400px) {
+	html {
+		font-size: 21.33333333px !important;
+	}
+}
+
+@media only screen and (min-width: 414px) {
+	html {
+		font-size: 22.08px !important;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	html {
+		font-size: 25.6px !important;
+	}
+}
+.masker {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;right: 0;bottom: 0;
+  left: 0;
+  z-index: 9;
+}
+// 修改输入框placeholder文字默认颜色
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #b9b9b9;
+    font-size: 30/@rem;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #b9b9b9;
+    font-size: 30/@rem;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #b9b9b9;
+    font-size: 30/@rem;
+  }
+// @media (min-width: 1170px){
+//     body{
+//         max-width: 1170px;
+//         margin: 0 auto;
+//     }
+// }
+.text-center{
+    text-align: center;
+}
+@base-bgcolor: #fff;
+@btn-bgcolor: #4f76e6;
+@base-color: #333;
+ /* reset end */
+/* 页面公用样式 start */ 
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90/@rem;
+    line-height: 90/@rem;
+    background-color: #f7f7f7;
+    h2{
+        width: 70%;
+        font-size: 34/@rem;
+        font-weight: 700;
+        color: @base-color;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .backBtn {
+      width: 90/@rem;
+      height: 90/@rem;
+      background-image: url(../images/angle_left_03.png);
+      background-repeat: no-repeat;
+      background-size: 18/@rem 30/@rem;
+      background-position: 50%;
+      position: absolute;
+      left: 0/@rem;
+      top: 0;
+    }
+}
+
+.btn{
+    width: 590/@rem;
+    height: 98/@rem;
+    font-size: 32/@rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    background: @btn-bgcolor;
+    border-radius: 10/@rem;
+}
+.li-title{
+    position: relative;
+    width: 100%;
+    margin-bottom: 26/@rem;
+    border-bottom: 0.5px solid #edeef5;
+    i{
+        position: absolute;
+        left: 30/@rem;
+        top: 48%;
+        transform: translateY(-50%);
+        width: 38/@rem;
+        height: 32/@rem;
+        background: url('../images/icon_member@2x.png') center no-repeat;
+        background-size: 100%;
+    }
+    h3{
+        display: flex;
+        align-items: center;
+        height: 88/@rem;
+        padding-left: 83/@rem;
+        font-size: 32/@rem;
+        font-weight: 700;
+        color: @base-color;
+    }
+}
+/* 页面公用样式 end */ 
+
+/* 上传图片 start */
+.upload-img{
+    .li-title{
+        margin-bottom: 0;
+        i{
+            top: 51%;
+            background: url('../images/icon_name.png') no-repeat center;
+            background-size: 100%;
+        }
+        span{
+            color: @btn-bgcolor;
+        }
+    }
+    .upload-wrapper{
+        margin: 0 auto;
+        width: 750/@rem;
+        padding-top: 24/@rem;
+    }
+    .upload-item{
+        padding-bottom: 34/@rem;
+        ul{
+            box-sizing: border-box;
+            padding: 6/@rem 35/@rem 0;
+        }  
+        li:nth-of-type(1) {
+            div.upload-plus{
+                position: relative;
+                width: 290/@rem;
+                height: 290/@rem;
+                background-image: url('../images/icon_upload_plus.png');
+                // background-image: url('../images/upload_plus.png');
+                // background-image: url('../images/icon_upload.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                // background-size: 148/@rem 124/@rem;
+                i.icon-right{
+                    position: absolute;
+                    width: 50/@rem;
+                    height: 50/@rem;
+                    top: 10/@rem;
+                    right: 10/@rem;
+                    background: url('../images/icon_right.png') no-repeat center;
+                    background-size: 50/@rem;
+                }
+                i.icon-error{
+                    position: absolute;
+                    width: 50/@rem;
+                    height: 50/@rem;
+                    top: 10/@rem;
+                    right: 10/@rem;
+                    background: url('../images/icon_error.png') no-repeat center;
+                    background-size: 50/@rem;
+                }
+            }
+        }
+        li:nth-of-type(2) {
+            div{
+                position: relative;
+                width: 290/@rem;
+                height: 290/@rem;
+                i{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    background: url('../images/icon_example.png') no-repeat right top;
+                    background-size: 165/@rem;
+                }
+            }
+        }     
+        li{
+            float: left;
+            padding: 24/@rem 25/@rem 0;
+            width: 290/@rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    p{
+        display: flex;
+        justify-content: start;
+        padding-right: 60/@rem;
+        line-height: 40/@rem;
+        font-size: 28/@rem;
+        color: #666;
+        i{
+            display: inline-block;
+            vertical-align: top;
+            height: 40/@rem;
+        }
+    }
+    .num-first{
+        p{
+            i{
+                width: 62/@rem;
+                margin-right: 20/@rem;
+                background: url('../images/icon_one.png') no-repeat right center;
+                background-size: 22/@rem 26/@rem; 
+            }
+        }
+    }
+    .num-second{
+        p{
+            i{
+                width: 66/@rem;
+                margin-right: 16/@rem;
+                background: url('../images/icon_two.png') no-repeat right center;
+                background-size: 28/@rem 26/@rem; 
+            }
+        }
+    }
+    .num-third{
+        p{
+            i{
+                width: 66/@rem;
+                margin-right: 15/@rem;
+                background: url('../images/icon_three.png') no-repeat right center;
+                background-size: 29/@rem 27/@rem; 
+            }
+        }
+    }
+    .upload-btn{
+        margin-bottom: 28/@rem;
+    }
+}
+
+.upload-img{
+    #progress-one, #progress-two, #progress-three{ 
+        position: absolute; left: 0;top: 40%;height: 60/@rem;line-height:60/@rem;font-size: 30/@rem;text-align: center;color: #FFF;background:rgba(10,168,241,.7); z-index: 3;
+        .bar{
+            background-image: -webkit-linear-gradient(top,#5cb85c 0,#449d44 100%); 
+            background-image: -o-linear-gradient(top,#5cb85c 0,#449d44 100%); 
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#5cb85c),to(#449d44)); 
+            background-image: linear-gradient(to bottom,#5cb85c 0,#449d44 100%); 
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0); 
+            background-repeat: repeat-x; 
+            height:  60/@rem; 
+            // line-height: 20px; 
+            text-align: center;
+            -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15); 
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.15); 
+            -webkit-transition: width .6s ease; 
+            -o-transition: width .6s ease; 
+            transition: width .6s ease; 
+        }
+    }
+}
+.web{
+    /*上传图片通用样式*/
+    .webuploader-pick{
+        position: relative;
+        display: inline-block;
+        vertical-align: top; 
+        width: 100%; height: 100%;
+        background: transparent;
+    }
+    .webuploader-container{ 
+        position: absolute; top:0;right:0;bottom:0;left:0; width: 100%; height: 100%; 
+        label{
+            position: absolute;left: 0;top: 0;width: 100%;
+        }
+    }
+    .webuploader-element-invisible{opacity: 0;width: 100%;height: 100%;clip: rect(1px 1px 1px 1px);clip: rect(1px,1px,1px,1px);}
+    .viewThumb{ 
+        position:relative;
+        width: 290/@rem;
+        height: 290/@rem;
+        background: #f6f6f6;
+        overflow:hidden;
+        z-index: 1;
+        img{
+            width: 100%;height: 100%;object-fit: cover;
+        }
+    }
+    // 上传进度
+    .diyBar{ 
+        position: absolute; 
+        display:none; 
+        top: 0;left: 0;width: 100%;height: 100%;
+        background: url(../images/bgblack.png);z-index: 3;
+        .diyProgress{ 
+            position: absolute; left: 0;top: 33px;width: 100%;height: 24px;line-height:24px;font-size: 14px;text-align: center;color: #FFF;background:rgba(10,168,241,.7); z-index: 3;
+        }
+    }
+
+    i.diyCancel{ 
+    //     display: block;
+    //     position: absolute;
+    //     top: 10px;
+    //     right: 0;
+    //     width: 20px;
+    //     height: 11px;
+    //     background: url(../images/upload-icon1.png) no-repeat 0 -11px; 
+        z-index: 10;
+    }
+    .virtual-one, .virtual-two, .virtual-three{
+        position: absolute;
+        top: 0;right:0;bottom:0;left:0;
+        width: 100%;
+        height: 100%;
+        background: #f6f6f6;
+        z-index: 10;
+        img{
+            object-fit: cover;
+        }
+        i.icon-virtual{
+            position: absolute;
+            width: 50/@rem;
+            height: 50/@rem;
+            top: 10/@rem;
+            right: 10/@rem;
+            background: url('../images/icon_error.png') no-repeat center;
+            background-size: 50/@rem;
+        }
+    }
+}
+/* 上传图片 end */
